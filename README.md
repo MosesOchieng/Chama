@@ -37,7 +37,8 @@ To run the Chama DAO locally, follow these steps:
     Run the project using cargo run.
     
 #Project Structures  
-my-project/
+
+ChamaDao/
 ├── .gitignore
 ├── Cargo.lock
 ├── Cargo.toml

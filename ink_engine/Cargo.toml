@@ -1,0 +1,31 @@
+[package]
+name = "ink_engine"
+version = "0.1.0"
+authors = ["[your_name] <[your_email]>"]
+edition = "2018"
+
+[dependencies]
+ink_primitives = { version = "4.2.0-rc3", default-features = false }
+ink_metadata = { version = "4.2.0-rc3", default-features = false, features = ["derive"], optional = true }
+ink_env = { version = "4.2.0", default-features = false }
+ink_storage = { version = "4.2.0" default-features = false }
+ink_lang = { version = "3.0.0-rc3", default-features = false }
+
+scale = { package = "parity-scale-codec", version = "3.5.0", default-features = false, features = ["derive"] }
+scale-info = { version = "2.6.0", default-features = false, features = ["derive"], optional = true }
+
+# Should be removed once bitvecto-rs/bitvec#105 is resolved
+funty = "2.0.0"
+
+[lib]
+name = "ink_engine"
+path = "lib.rs"
+crate-type = [
+	# Used for normal contract Wasm blobs.
+	"cdylib",
+]
+
+[features]
+default = ["std"]
+
+ink-as-dependency = []

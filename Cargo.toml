@@ -1,0 +1,59 @@
+[package]
+name = "ChamaDao"
+version = "0.2.0"
+edition = "2018"
+
+[dependencies]
+cargo-contract = "2.2.0"
+ink_engine = { version = "4.2.0", default-features = false }
+secp256k1 = "0.27.0"
+getrandom = "0.2.3"
+ink_env = { version = "4.2.0", default-features = false, features = ["std"] }
+ink_primitives = { version = "4.2.0", default-features = false }
+ink_metadata = { version = "4.2.0", default-features = false, features = ["derive"], optional = true }
+ink_storage = { version = "4.1.0", default-features = false }
+ink_prelude = { version = "4.2.0" }
+ink_lang = { version = "3.1.0", default-features = false }
+scale = { package = "parity-scale-codec", version = "3.5.0", default-features = false, features = ["derive"] }
+scale-info = { version = "2.6.0", default-features = false, features = ["derive"], optional = true }
+
+[target.'cfg(target_arch = "wasm32")']
+rustflags = [
+    "-C", "link-arg=-zstack-size=32768",
+    "-C", "link-arg=-zheap-size=32768",
+]
+
+[[contract]]
+name = "MyContract"
+file = "src/main.rs"
+optimize = true 
+
+[lib]
+name = "ChamaDao"
+path = "src/lib.rs"
+crate-type = ["cdylib", "lib"]
+
+
+[[bin]]
+name = "spec"
+required-features = ["test-env"]
+path = "src/spec.rs"
+
+[features]
+std = ["ink_lang/std"]
+default = ["std"]
+
+ink-as-dependency = []
+
+js = ["getrandom/js"]
+
+
+[profile.dev]
+debug = true
+codegen-units = 1
+
+[profile.release]
+debug = false
+codegen-units = 1
+lto = true
+panic = 'abort'

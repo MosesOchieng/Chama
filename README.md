@@ -1,6 +1,9 @@
 # Chama DAO using Polkadot, Chopsticks, and Subsocial
+
 #Project Deplyoment link 
 https://chama-jet.vercel.app/
+
+#Introduction
 This project is a decentralized autonomous organization (DAO) that allows users to create and manage investment clubs called "chamas". It uses several cutting-edge technologies including Polkadot, Chopsticks, and Subsocial to create a secure and transparent platform for managing investment groups.
 Features
 

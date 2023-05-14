@@ -1,9 +1,9 @@
 # Chama DAO using Polkadot, Chopsticks, and Subsocial
 
-#Project Deplyoment link 
+# Project Deplyoment link 
 https://chama-jet.vercel.app/
 
-#Introduction
+# Introduction
 This project is a decentralized autonomous organization (DAO) that allows users to create and manage investment clubs called "chamas". It uses several cutting-edge technologies including Polkadot, Chopsticks, and Subsocial to create a secure and transparent platform for managing investment groups.
 Features
 
@@ -13,7 +13,7 @@ Features
     Disburse funds to approved proposals
     Integration with Subsocial for social networking and content sharing
 
-#Technologies Used
+# Technologies Used
 Polkadot
 
 Polkadot is a next-generation blockchain platform that allows for interoperability between different blockchain networks. In this project, we use Polkadot to authenticate users using their wallet addresses.
@@ -31,7 +31,7 @@ How It Works
     If a proposal is approved, funds are disbursed to the investment opportunity.
     Members can also use Subsocial to communicate and share content related to their chama.
 
-#Getting Started
+# Getting Started
 
 To run the Chama DAO locally, follow these steps:
 
@@ -40,7 +40,7 @@ To run the Chama DAO locally, follow these steps:
     Install dependencies using cargo build.
     Run the project using cargo run.
     
-#Project Structures  
+# Project Structures  
 
 ChamaDao/
 ├── .gitignore
@@ -87,10 +87,10 @@ ChamaDao/
 └── target/
 
 
-#Contributors
+# Contributors
 
    Moses Ochieng
 
-#License
+# License
 
 This project is licensed under the MIT License.
